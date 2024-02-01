@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\BlogsController;
+use App\Http\Controllers\OrdersController;
+use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -33,3 +35,8 @@ Route::get('/remove-user/{user}', [UsersController::class, 'destroy'])->name('re
 Route::resource('blog', BlogsController::class);
 Route::get('/remove-blog/{blog}', [BlogsController::class, 'destroy'])->name('removeBlog');
 Route::get('/all-blogs', [BlogsController::class, 'allBlogs'])->name('allBlogs');
+
+Route::resource('product', ProductsController::class);
+Route::get('/remove-product/{product}', [ProductsController::class, 'destroy'])->name('removeProduct');
+
+Route::resource('order', OrdersController::class);

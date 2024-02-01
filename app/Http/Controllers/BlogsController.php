@@ -38,8 +38,6 @@ class BlogsController extends Controller
                
                 ->make(true);
         }
-
-
         return view('layouts.Blog.allBlogs');
     }
 

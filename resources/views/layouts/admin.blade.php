@@ -89,6 +89,22 @@
             </a>
         </li>
         
+          <!-- Nav Item - Profile -->
+          <li class="nav-item {{ Nav::isRoute('product') }}">
+            <a class="nav-link" href="{{ route('product.index') }}">
+                <i class="fas fa-fw fa-user"></i>
+                <span>{{ __('Products') }}</span>
+            </a>
+        </li>
+         <!-- Nav Item - Profile -->
+         <li class="nav-item {{ Nav::isRoute('order') }}">
+            <a class="nav-link" href="{{ route('order.index') }}">
+                <i class="fas fa-fw fa-user"></i>
+                <span>{{ __('Orders') }}</span>
+            </a>
+        </li>
+        
+
         <!-- Nav Item - Profile -->
         <li class="nav-item {{ Nav::isRoute('profile') }}">
             <a class="nav-link" href="{{ route('profile') }}">

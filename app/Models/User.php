@@ -62,4 +62,9 @@ class User extends Authenticatable
     {
         $this->attributes['password'] = bcrypt($value);
     }
+
+    public function Orders()
+    {
+        return $this->belongsTo(Orders::class,  'id', 'user_id');
+    }
 }
